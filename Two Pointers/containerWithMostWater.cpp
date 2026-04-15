@@ -13,5 +13,24 @@ public:
         return maxArea;
     }
 };
-
+// Optima Approach Time Complexity O(n) space complexity O(1)
+class Solution {
+public:
+    int maxArea(vector<int>& heights) {
+        int n = heights.size();
+        int maxArea = INT_MIN;
+        int i = 0 , j = n - 1;
+        while(i <= j){
+            int minHeight = min(heights[i], heights[j]);
+            int area = minHeight * (j - i);
+            maxArea = max(area,maxArea);
+            if(minHeight == heights[i]){
+                i++;
+            }else{
+                j--;
+            }
+        }
+        return maxArea;
+    }
+};
 
