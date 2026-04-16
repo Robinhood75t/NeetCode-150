@@ -51,3 +51,25 @@ public:
         return res;
     }
 };
+// Optimal approach time complexity O(n) space complexity O(1)
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        int n = height.size();
+        int l = 0 , r = n - 1;
+        int res = 0;
+        int leftMax = height[l], rightMax = height[r];
+        while(l < r){
+            if(height[l] < height[r]){
+                l++;
+                leftMax = max(leftMax,height[l]);
+                res += leftMax - height[l];
+            }else{
+                r--;
+                rightMax = max(rightMax,height[r]);
+                res += rightMax - height[r];
+            }
+        }
+        return res;
+    }
+};
