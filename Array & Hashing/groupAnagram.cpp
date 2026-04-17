@@ -6,11 +6,7 @@ public:
         for(int i = 0; i < strs.size(); i++){
             string st = strs[i]; 
             sort(st.begin(),st.end()); 
-            if(mymap.find(st) != mymap.end()){
-                mymap[st].push_back(strs[i]);
-            }else{
-                mymap[st].push_back(strs[i]);
-            }
+            mymap[st].push_back(strs[i]);
         }
         vector<vector<string>> ans;
         for(auto& arr: mymap){
