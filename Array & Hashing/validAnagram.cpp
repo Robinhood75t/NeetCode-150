@@ -8,7 +8,6 @@ public:
     }
 };
 
-
 // Optimal approach : O(n) time complexity & O(n) in general , but O(1) space complexity
 class Solution {
 public:
