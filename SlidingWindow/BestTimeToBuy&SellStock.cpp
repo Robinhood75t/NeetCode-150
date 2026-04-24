@@ -18,3 +18,18 @@ public:
         return max_profit;
     }
 };
+// approach 2
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int n = prices.size();
+        int max_profit = INT_MIN;
+        int min_price = INT_MAX;
+        for(int i = 0; i < n; i++){
+            min_price = min(prices[i],min_price);
+            int profit = prices[i] - min_price;
+            max_profit = max(profit,max_profit);
+        }
+        return max_profit;
+    }
+};
