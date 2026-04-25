@@ -52,6 +52,7 @@ public:
     }
 };
 // Optimal approach time complexity O(n) space complexity O(1)
+// Tow pointer approach
 class Solution {
 public:
     int trap(vector<int>& height) {
