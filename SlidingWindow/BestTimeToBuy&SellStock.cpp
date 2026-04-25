@@ -33,3 +33,4 @@ public:
         return max_profit;
     }
 };
+// approach 3
