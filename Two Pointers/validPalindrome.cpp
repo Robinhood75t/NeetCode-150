@@ -1,3 +1,4 @@
+// without using two pointer appraoch
 class Solution {
 public:
     bool isPalindrome(string s) {
