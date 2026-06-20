@@ -15,4 +15,4 @@ public:
         return prev;
     }
 };
-
+// This is the neive approach , i have a good approach for this problem.
